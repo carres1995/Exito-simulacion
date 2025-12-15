@@ -28,6 +28,19 @@ body, html{
     .pedido-header{
         display: none;
     }
+    .n1, .n2, .n4{
+        display: none;
+    }
+    
+    .imagen-c img{
+        height:30;
+        width: 200px;
+    }
+    
+    .comentario{
+        white-space: none;
+    }
+
 }
 .menu{
     display: flex;
@@ -79,7 +92,6 @@ a:hover{
 .carrusel{
     height: 15rem;
     border-radius: 20px;
-    background-color: rgb(3, 71, 3);
     position: relative;
     overflow: hidden;
     
@@ -87,17 +99,17 @@ a:hover{
 .imagen-c{
     display: flex;
     position: absolute;
-    width: 300%;
+    width: 100%;
     height: 100%;
     animation: fotos 12s infinite ease-in-out;
     inset: 0;
 }
 .imagen-c img{
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
     object-fit: cover;
     object-position: center;
-    flex-shrink: 0;
 }
 
 @keyframes fotos {
@@ -117,18 +129,27 @@ a:hover{
     gap: 15px;
 }
 .mostrador{
-    background: rgb(3, 71, 3);
-    height: 3.5rem;
+    height: auto;
     flex: 1;
-    border-radius: 20px;
+}
+.mostrador:hover{
+    transform: translateY(-5px);
+    transition: 1s ease-in-out;
+}
+.mostrador img{
+    max-width: 100%;
+    height: 100%;
 }
 .comentario{
     color: white;
-    background-color: rgb(3, 71, 3);
     padding: 0 30px;
     max-width: 100%;
     min-width: 0;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 .comentario a{
     padding: 0 15px;
     background: rgb(230, 230, 9);
@@ -138,16 +159,19 @@ a:hover{
     text-overflow: ellipsis;
 }
 .comentario p{
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
     min-width: 0;
+    background-color: rgb(3, 71, 3);
 }
 .caja-sorprende{
-    height: 3.5rem;
-    background-color: rgb(3, 71, 3);
+    height: auto;
     margin: 0 35px;
+}
+.caja-sorprende img{
+    max-width: 100%;
+    height: 100%;
 }
 .cajas4{
     display: flex;
@@ -160,13 +184,19 @@ a:hover{
     gap: 15px;
 }
 .cuadros{
-    height: 10rem;
-    background-color: rgb(3, 71, 3);
-    flex: 2;
+    height: auto;
+    flex: 1;
+}
+.cuadros img{
+    max-width: 100%;
+    height: 100%;
 }
 .caja-navidad{
-    height: 3.5rem;
-    background-color: rgb(3, 71, 3);
+    height: auto;
     margin: 0 35px;
-    border-radius: 15px;
+    border-radius: 20px;
+}
+.caja-navidad img{
+    max-width: 100%;
+    height: 100%;
 }
