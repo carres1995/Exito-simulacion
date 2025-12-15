@@ -166,6 +166,8 @@ a:hover{
     background-color: rgb(3, 71, 3);
 }
 .caja-sorprende{
+    display: flex;
+    justify-content: center;
     height: auto;
     margin: 0 35px;
 }
