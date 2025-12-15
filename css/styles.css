@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.header{
+    z-index: 1;
+    top: 0;
+    position: sticky;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    background: rgb(230, 230, 9);
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+@media (max-width: 700px) {
+    .input{
+        display: none;
+    }
+    .pedido-header{
+        display: none;
+    }
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.input-search{
+    background-image: url("../img/buscar.svg");
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size: 18px;
+    padding: 0;
+    border-radius: 10px 0 0 10px
+}
+
+a:hover{
+    color: grey;
+}
+.nav{
+    z-index: 1;
+    position: sticky;
+    top: 5rem;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: grey;
+    border-radius: 10px 0 0 10px ;
+}
+.nav a:hover{
+    color: blue;
+}
+.container{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,1fr);
+    row-gap: 20px;
+}
+
+.carrusel{
+    height: 15rem;
+    border-radius: 20px;
+    background-color: rgb(3, 71, 3);
+    position: relative;
+    overflow: hidden;
+    
+}
+.imagen-c{
+    display: flex;
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    animation: fotos 12s infinite ease-in-out;
+    inset: 0;
+}
+.imagen-c img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    flex-shrink: 0;
+}
+
+@keyframes fotos {
+    0% {transform: translateX(0);}
+    33% { transform: translateX(0); }
+    36% { transform: translateX(-100%); }
+    66% { transform: translateX(-100%); }
+    69% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+.cajas3{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    gap: 15px;
+}
+.mostrador{
+    background: rgb(3, 71, 3);
+    height: 3.5rem;
+    flex: 1;
+    border-radius: 20px;
+}
+.comentario{
+    color: white;
+    background-color: rgb(3, 71, 3);
+    padding: 0 30px;
+    max-width: 100%;
+    min-width: 0;
+}
+.comentario a{
+    padding: 0 15px;
+    background: rgb(230, 230, 9);
+    border-radius: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.comentario p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    min-width: 0;
+}
+.caja-sorprende{
+    height: 3.5rem;
+    background-color: rgb(3, 71, 3);
+    margin: 0 35px;
+}
+.cajas4{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.cuadros{
+    height: 10rem;
+    background-color: rgb(3, 71, 3);
+    flex: 2;
+}
+.caja-navidad{
+    height: 3.5rem;
+    background-color: rgb(3, 71, 3);
+    margin: 0 35px;
+    border-radius: 15px;
+}
